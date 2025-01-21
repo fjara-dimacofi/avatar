@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ye720fkpt5se"]
+
+[ext_resource type="Script" path="res://Alien/alien.gd" id="1_kfxsx"]
+[ext_resource type="PackedScene" uid="uid://bynm2qv8pem01" path="res://Alien/mouth rig.blend" id="1_xohnc"]
+
+[node name="Alien" type="Node3D"]
+script = ExtResource("1_kfxsx")
+
+[node name="mouth rig" parent="." instance=ExtResource("1_xohnc")]
+transform = Transform3D(0.656033, 0, 0.754732, 0, 1, 0, -0.754732, 0, 0.656033, -0.194674, 0, 0.0191581)
+
+[node name="camera pivot" parent="mouth rig" index="1"]
+transform = Transform3D(0.56551, 0.017949, 0.134755, -5.41676e-10, 0.576528, -0.0767925, -0.135945, 0.0746653, 0.560559, 0, -0.0400161, 0)
+
+[node name="Skeleton3D" parent="mouth rig/Armature" index="0"]
+bones/2/position = Vector3(3.72529e-09, 0.418772, 0.0904884)
+bones/3/position = Vector3(1.60802e-14, 0.418772, 0.0904884)
+bones/4/position = Vector3(1.60803e-14, 0.418772, 0.0904884)
+bones/5/position = Vector3(-1.83989e-15, 0.228463, 0.817103)
+
+[node name="head" parent="mouth rig/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.999475, 0, 0.0323876, 0, 1, 0, -0.0323876, 0, 0.999475, 0, 0, 0)
+
+[editable path="mouth rig"]
