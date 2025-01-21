@@ -1,11 +1,11 @@
-extends Node
+extends Object
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func parse(input: String) -> Array:
+	var split_input = input.split("\r\n")
+	var result = []
+	for pair in split_input:
+		var split_pair = pair.split("\t")
+		if split_pair.size() != 2:
+			continue
+		result.append([float(split_pair[0]), split_pair[1]])
+	return result
