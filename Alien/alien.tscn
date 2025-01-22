@@ -9,14 +9,13 @@ script = ExtResource("1_kfxsx")
 [node name="mouth rig" parent="." instance=ExtResource("1_xohnc")]
 transform = Transform3D(0.656033, 0, 0.754732, 0, 1, 0, -0.754732, 0, 0.656033, -0.194674, 0, 0.0191581)
 
-[node name="camera pivot" parent="mouth rig" index="1"]
-transform = Transform3D(0.56551, 0.017949, 0.134755, -5.41676e-10, 0.576528, -0.0767925, -0.135945, 0.0746653, 0.560559, 0, -0.0400161, 0)
-
 [node name="Skeleton3D" parent="mouth rig/Armature" index="0"]
-bones/2/position = Vector3(3.72529e-09, 0.418772, 0.0904884)
-bones/3/position = Vector3(1.60802e-14, 0.418772, 0.0904884)
-bones/4/position = Vector3(1.60803e-14, 0.418772, 0.0904884)
-bones/5/position = Vector3(-1.83989e-15, 0.228463, 0.817103)
+bones/2/rotation = Quaternion(0.944104, -3.92971e-08, -9.47004e-08, 0.329648)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(0.852878, -1.24481e-07, -2.05292e-07, 0.52211)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/rotation = Quaternion(0.788396, -4.40005e-07, -5.78831e-07, 0.615168)
+bones/4/scale = Vector3(1, 1, 1)
 
 [node name="head" parent="mouth rig/Armature/Skeleton3D" index="0"]
 transform = Transform3D(0.999475, 0, 0.0323876, 0, 1, 0, -0.0323876, 0, 0.999475, 0, 0, 0)
