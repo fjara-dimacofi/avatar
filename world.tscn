@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnvgswebnqhlq"]
+[gd_scene load_steps=2 format=3 uid="uid://cnvgswebnqhlq"]
 
 [ext_resource type="PackedScene" uid="uid://ye720fkpt5se" path="res://Alien/alien.tscn" id="1_byibk"]
-[ext_resource type="PackedScene" uid="uid://21w4odmbdi51" path="res://voice_recorder.tscn" id="2_td73c"]
 
 [node name="World" type="Node3D"]
 
@@ -12,5 +11,3 @@ transform = Transform3D(0.026979, 0, 0.999636, 0, 1, 0, -0.999636, 0, 0.026979, 
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
 transform = Transform3D(0.999929, -0.011616, -0.0026278, 0.011616, 0.902563, 0.430402, -0.0026278, -0.430402, 0.902634, 0.0759002, 2.19236, 2.81229)
-
-[node name="VoiceRecorder" parent="." instance=ExtResource("2_td73c")]
