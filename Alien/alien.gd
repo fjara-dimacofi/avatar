@@ -42,7 +42,7 @@ func _generate_rhubarb_lipsync():
 	var audio_import = GdScriptAudioImport.new()
 	var new_stream = audio_import.loadfile(voice_recorder.response_path)
 	audio_stream_player.stream = new_stream
-	var file_path = ProjectSettings.globalize_path(voice_recorder.recording_path)
+	var file_path = ProjectSettings.globalize_path(voice_recorder.response_path)
 	var rhubarb_parser = RhubarbParser.new()
 	match OS.get_name():
 		"Windows":

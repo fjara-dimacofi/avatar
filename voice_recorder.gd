@@ -40,11 +40,9 @@ func _speech_to_text():
 
 func _text_to_llm(text):
 	var output = []
-	print(context)
 	var command = "echo '" + context + text + "'| uv run llm.py"
 	OS.execute("sh", ["-c", command], output)
 	var result = output[0].rstrip("\n")
-	print(command)
 	context += "<User>" + text + "</User>" + "<LLMResponse>" + result + "</LLMResponse>"
 	_llm_to_voice(result)
 	
