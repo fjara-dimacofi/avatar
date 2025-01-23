@@ -4,7 +4,7 @@ var effect
 var recording
 var recording_name: String = "user_voice.wav"
 var recording_path = "user://" + recording_name
-var response_path = "user://llm_voice.wav"
+var response_path = "user://llm_voice.mp3"
 var _thread = Thread.new()
 var context: String = ""
 signal voice_response_ready
@@ -48,10 +48,12 @@ func _text_to_llm(text):
 	
 func _llm_to_voice(text):
 	var output = []
+	var wav_response_path = "user://llm_voice.wav"
 	var command = "echo " + text + \
 	 " | .venv/bin/piper --model voices/es_MX-claude-high.onnx --output_file " \
-	+ ProjectSettings.globalize_path(response_path)
+	+ ProjectSettings.globalize_path(wav_response_path)
 	OS.execute("sh", ["-c", command], output, true)
+	OS.execute("ffmpeg", ["-y", "-i", ProjectSettings.globalize_path(wav_response_path), ProjectSettings.globalize_path(response_path)], output, true)
 	print("recording ready")
 	call_deferred("emit_signal", "voice_response_ready")
 

@@ -193,7 +193,8 @@ func convert_to_16bit(data: PackedByteArray, from: int) -> PackedByteArray:
 			var sub_array = data.slice(i, i+4)
 			spb.data_array = PackedByteArray(sub_array)
 			single_float = spb.get_float()
-			value = single_float * 32768
+			#value = single_float * 32768
+			value = clamp(single_float * 32768, -32768, 32767)
 			data[i/2] = value
 			data[i/2+1] = value >> 8
 		data.resize(data.size() / 2)

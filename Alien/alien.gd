@@ -39,9 +39,10 @@ func _process(delta: float) -> void:
 	wait_timer -= delta
 	
 func _generate_rhubarb_lipsync():
-	var audio_import = GdScriptAudioImport.new()
-	var new_stream = audio_import.loadfile(voice_recorder.response_path)
-	audio_stream_player.stream = new_stream
+	var file = FileAccess.open(voice_recorder.response_path, FileAccess.READ)
+	var sound = AudioStreamMP3.new()
+	sound.data = file.get_buffer(file.get_length())
+	audio_stream_player.stream = sound
 	var file_path = ProjectSettings.globalize_path(voice_recorder.response_path)
 	var rhubarb_parser = RhubarbParser.new()
 	match OS.get_name():
