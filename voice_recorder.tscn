@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://21w4odmbdi51"]
+
+[ext_resource type="Script" path="res://voice_recorder.gd" id="1_yiy6c"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_mcfuc"]
+
+[node name="VoiceRecorder" type="Node"]
+script = ExtResource("1_yiy6c")
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_mcfuc")
+autoplay = true
+bus = &"Record"

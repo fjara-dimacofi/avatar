@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var animation_player: AnimationPlayer = $"mouth rig/AnimationPlayer"
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamVoice
 const RhubarbParser = preload("res://rhubarb_parser.gd")
 
 var wait_timer: float = 0.5
@@ -32,15 +32,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if true:
+		return
 	if abs(wait_timer) < 0.01:
-		audio_stream_player_2d.play()
+		audio_stream_player.play()
 		time_since_start = 0
-	if not audio_stream_player_2d.playing and wait_timer < 0:
+	if not audio_stream_player.playing and wait_timer < 0:
 		animation_player.play("A")
 		wait_timer = 0.5
 		next_mouth_position = 0
 	
-	if audio_stream_player_2d.playing and next_mouth_position < mouth_positions.size():
+	if audio_stream_player.playing and next_mouth_position < mouth_positions.size():
 		var timestamp = mouth_positions[next_mouth_position][0]
 		var mouth_position = mouth_positions[next_mouth_position][1]
 		

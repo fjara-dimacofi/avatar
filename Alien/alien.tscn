@@ -21,7 +21,7 @@ bones/4/scale = Vector3(1, 1, 1)
 [node name="head" parent="mouth rig/Armature/Skeleton3D" index="0"]
 transform = Transform3D(0.999475, 0, 0.0323876, 0, 1, 0, -0.0323876, 0, 0.999475, 0, 0, 0)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamVoice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_5gq86")
 volume_db = 24.0
 
