@@ -6,12 +6,13 @@ var recording_name: String = "user_voice.wav"
 var recording_path = "user://" + recording_name
 var response_path = "user://llm_voice.wav"
 var _thread = Thread.new()
+var context: String = ""
 signal voice_response_ready
 
 func _ready() -> void:
 	var idx = AudioServer.get_bus_index("Record")
 	effect = AudioServer.get_bus_effect(idx, 0)
-
+	voice_response_ready.connect(_thread.wait_to_finish)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -34,14 +35,17 @@ func _speech_to_text():
 	var arguments = ["run", "stt.py", ProjectSettings.globalize_path(recording_path)]
 	var output = []
 	OS.execute("uv", arguments, output)
-	var result = output[0].rstrip("\n")
+	var result = output[0].rstrip("\n").lstrip(" ")
 	_text_to_llm(result)
 
 func _text_to_llm(text):
 	var output = []
-	var command = "echo " + text + " | uv run llm.py"
+	print(context)
+	var command = "echo '" + context + text + "'| uv run llm.py"
 	OS.execute("sh", ["-c", command], output)
 	var result = output[0].rstrip("\n")
+	print(command)
+	context += "<User>" + text + "</User>" + "<LLMResponse>" + result + "</LLMResponse>"
 	_llm_to_voice(result)
 	
 func _llm_to_voice(text):
@@ -52,4 +56,7 @@ func _llm_to_voice(text):
 	OS.execute("sh", ["-c", command], output, true)
 	print("recording ready")
 	call_deferred("emit_signal", "voice_response_ready")
-	
+
+
+func _exit_tree() -> void:
+	_thread.wait_to_finish()
