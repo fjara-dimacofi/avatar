@@ -70,14 +70,12 @@ source = { virtual = "." }
 dependencies = [
     { name = "faster-whisper" },
     { name = "ollama" },
-    { name = "piper-tts" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "faster-whisper", specifier = ">=1.1.1" },
     { name = "ollama", specifier = ">=0.4.7" },
-    { name = "piper-tts", specifier = ">=1.2.0" },
 ]
 
 [[package]]
@@ -451,33 +449,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d0/63/68dbb6eb2de9cb10ee4c9c14a0148804425e13c4fb20d61cce69f53106da/packaging-24.2.tar.gz", hash = "sha256:c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f", size = 163950 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/88/ef/eb23f262cca3c0c4eb7ab1933c3b1f03d021f2c48f54763065b6f0e321be/packaging-24.2-py3-none-any.whl", hash = "sha256:09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759", size = 65451 },
-]
-
-[[package]]
-name = "piper-phonemize"
-version = "1.1.0"
-source = { registry = "https://pypi.org/simple" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/6d/ef/003d02c9d9208169361327e970511abafb94dfabb3e0daebfbb0983c1443/piper_phonemize-1.1.0-cp310-cp310-macosx_13_0_x86_64.whl", hash = "sha256:8f1024e89a0215624a74ab3b504db084aa1486cadff4acb52e0381bdeed4c88b", size = 16060767 },
-    { url = "https://files.pythonhosted.org/packages/66/ca/65e4cee554554a648af9cca6ce4ab7f14ea9ea62f1d77b2f53fbcf3329e4/piper_phonemize-1.1.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:a39507d2105acce4b6a01cb9c62c714e45f45f35753e2c7a52a195e97e1a00d9", size = 24507493 },
-    { url = "https://files.pythonhosted.org/packages/e9/e0/17c224e4a2a78c7fdd7c0a680693b1753293384ddfe860550950ed9b7e97/piper_phonemize-1.1.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:a1a6d468afba2eba084ec7457d1eb74b758ade94125b03c216b892150f3caa1c", size = 24954130 },
-    { url = "https://files.pythonhosted.org/packages/38/23/64a9fae86b5aedd3a3b0aab942f41237aebe74e2d28e3364880d1bfa7e47/piper_phonemize-1.1.0-cp311-cp311-macosx_10_14_x86_64.whl", hash = "sha256:d4b9265213ab53275d52318c18226c30c1cde5ab6d829f73c6ae6b8deb49e612", size = 16031645 },
-    { url = "https://files.pythonhosted.org/packages/d2/d0/04c99158daa29bad5f6e7f981cdc423556b77d2194f744b319094142651b/piper_phonemize-1.1.0-cp311-cp311-macosx_13_0_x86_64.whl", hash = "sha256:a021b6e49e26e14246579d01264353880f261be66c03ab7cb353d28ed49a59a2", size = 16062184 },
-    { url = "https://files.pythonhosted.org/packages/6f/eb/02440084802648a3e074c0db9a72dfbbce35f4110ed3db085129d5dca7bc/piper_phonemize-1.1.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:793077437584cf314a6d49c9c6d9d655b4c373391da5384e832208aa80402949", size = 24508707 },
-    { url = "https://files.pythonhosted.org/packages/b8/b7/a8fc2584d509ca36d5713693d675a88f80e4c3725e16a8c7ff1451f0ba99/piper_phonemize-1.1.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:c1062e00c94835e9115df7ce1d7b3b5c40c6d845cd70b2c121954faf5b8d23c7", size = 24955361 },
-    { url = "https://files.pythonhosted.org/packages/6e/8b/df9da36b29664db0883beb0d2c36b7b4bf6e683fef16dea2195742525b99/piper_phonemize-1.1.0-cp312-cp312-macosx_13_0_x86_64.whl", hash = "sha256:9c5401dc49ca868f988d88d48e592ec39a10e3fedde994c884854a6c0f44f634", size = 16061014 },
-]
-
-[[package]]
-name = "piper-tts"
-version = "1.2.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "onnxruntime" },
-    { name = "piper-phonemize" },
-]
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/24/aa/215bced0725cf5b5afe939f86b177c8ddb0d38292a94e85c55b3fcf6d46d/piper_tts-1.2.0-py3-none-any.whl", hash = "sha256:f3410aea0f8051d8a118050a5b954faeb36f6ac0da6d10fc2f8a043a8eaf27b5", size = 29454 },
 ]
 
 [[package]]

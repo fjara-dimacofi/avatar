@@ -4,7 +4,9 @@ var effect
 var recording
 var recording_name: String = "user_voice.wav"
 var recording_path = "user://" + recording_name
-var response_path = "user://llm_voice.mp3"
+var mp3_response_path = "user://llm_voice.mp3"
+var wav_response_path = "user://llm_voice.wav"
+
 var _thread = Thread.new()
 var context: String = ""
 signal voice_response_ready
@@ -32,28 +34,48 @@ func _toggle_record():
 		effect.set_recording_active(true)
 
 func _speech_to_text():
+	print("recording")
 	var arguments = ["run", "stt.py", ProjectSettings.globalize_path(recording_path)]
 	var output = []
-	OS.execute("uv", arguments, output)
-	var result = output[0].rstrip("\n").lstrip(" ")
+	OS.execute("uv", arguments, output,  true)
+	print(output)
+	var result = output[0].rstrip("\r\n").lstrip(" ")
+	print(result)
 	_text_to_llm(result)
 
 func _text_to_llm(text):
 	var output = []
-	var command = "echo '" + context + text + "'| uv run llm.py"
-	OS.execute("sh", ["-c", command], output)
-	var result = output[0].rstrip("\n")
+	var command = 'echo "<Context>'  + context + '</Context>' + text + '" | uv run llm.py'
+	match OS.get_name():
+		"Windows":
+			OS.execute("cmd.exe", ["/C", command], output)
+		"Linux":
+			OS.execute("sh", ["-c", command], output)
+	var result = output[0].rstrip("\r\n").replace("'", "")
 	context += "<User>" + text + "</User>" + "<LLMResponse>" + result + "</LLMResponse>"
 	_llm_to_voice(result)
+	print(result)
 	
 func _llm_to_voice(text):
 	var output = []
-	var wav_response_path = "user://llm_voice.wav"
-	var command = "echo " + text + \
-	 " | .venv/bin/piper --model voices/es_MX-claude-high.onnx --output_file " \
-	+ ProjectSettings.globalize_path(wav_response_path)
-	OS.execute("sh", ["-c", command], output, true)
-	OS.execute("ffmpeg", ["-y", "-i", ProjectSettings.globalize_path(wav_response_path), ProjectSettings.globalize_path(response_path)], output, true)
+
+	match OS.get_name():
+		"Windows":
+			var command = 'echo "' + text + '"' + \
+			" | piper --model voices/es_MX-claude-high.onnx --output_file " \
+			+ ProjectSettings.globalize_path(wav_response_path)
+			OS.execute("cmd.exe", ["/C", command], output, true)
+			print(command)
+		"Linux":
+			var command = 'echo "' + text + '"' + \
+			" | .venv/bin/piper --model voices/es_MX-claude-high.onnx --output_file " \
+			+ ProjectSettings.globalize_path(wav_response_path)
+			OS.execute("sh", ["-c", command], output, true)
+	OS.execute("ffmpeg", [
+		"-y", "-i",
+		 ProjectSettings.globalize_path(wav_response_path),
+		 ProjectSettings.globalize_path(mp3_response_path)],
+		 output)
 	print("recording ready")
 	call_deferred("emit_signal", "voice_response_ready")
 
