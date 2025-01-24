@@ -37,8 +37,7 @@ func _speech_to_text():
 	print("recording")
 	var arguments = ["run", "stt.py", ProjectSettings.globalize_path(recording_path)]
 	var output = []
-	OS.execute("uv", arguments, output,  true)
-	print(output)
+	OS.execute("uv", arguments, output)
 	var result = output[0].rstrip("\r\n").lstrip(" ")
 	print(result)
 	_text_to_llm(result)
@@ -50,11 +49,14 @@ func _text_to_llm(text):
 		"Windows":
 			OS.execute("cmd.exe", ["/C", command], output)
 		"Linux":
+			command = "echo '<Context>" + context + "</Context>"+ text + "'" + " | uv run llm.py" 
 			OS.execute("sh", ["-c", command], output)
+			print(command)
+			print(output)
 	var result = output[0].rstrip("\r\n").replace("'", "")
 	context += "<User>" + text + "</User>" + "<LLMResponse>" + result + "</LLMResponse>"
-	_llm_to_voice(result)
 	print(result)
+	_llm_to_voice(result)
 	
 func _llm_to_voice(text):
 	var output = []
@@ -67,10 +69,12 @@ func _llm_to_voice(text):
 			OS.execute("cmd.exe", ["/C", command], output, true)
 			print(command)
 		"Linux":
-			var command = 'echo "' + text + '"' + \
+			var command = "echo '" + text + "'" + \
 			" | .venv/bin/piper --model voices/es_MX-claude-high.onnx --output_file " \
 			+ ProjectSettings.globalize_path(wav_response_path)
 			OS.execute("sh", ["-c", command], output, true)
+			print(command)
+			print(output)
 	OS.execute("ffmpeg", [
 		"-y", "-i",
 		 ProjectSettings.globalize_path(wav_response_path),
