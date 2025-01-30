@@ -23,7 +23,7 @@ def process_text(text):
     </UserSpeech>
     """
     response = chat(
-        model='llama3.1',
+        model='llama3.2:1b',
         messages=[{'role': 'user', 'content': f'{master_prompt}{prompt}'}],
     )
     return response.message.content
