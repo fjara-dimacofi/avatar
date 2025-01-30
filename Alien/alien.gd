@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var animation_player: AnimationPlayer = $"mouth rig/AnimationPlayer"
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamVoice
-@onready var voice_recorder: Node = $VoiceRecorder
+@onready var voice_recorder: Node = $VoiceGoogleApi
 const RhubarbParser = preload("res://rhubarb_parser.gd")
 const GdScriptAudioImport = preload("res://GDScriptAudioImport.gd")
 
@@ -51,9 +51,9 @@ func _generate_rhubarb_lipsync():
 			var rhubarb_path = ProjectSettings.globalize_path(rhubarb_relative_path)
 			var windows_rhubarb_path = rhubarb_path.replace("/", "\\")	
 			var windows_file_path = wav_file_path.replace("/", "\\")
-			var arguments = ["/C", windows_rhubarb_path, "-r", "phonetic", "--extendedShapes", "A", windows_file_path]
+			var command = ["/C", windows_rhubarb_path, "-r", "phonetic", "--extendedShapes", "A", windows_file_path]
 			var output = []
-			var exit_code = OS.execute("cmd.exe", arguments, output)
+			var exit_code = OS.execute("cmd.exe", command, output)
 			mouth_positions = rhubarb_parser.parse(output[0])
 		"Linux":
 			var arguments = ["-r", "phonetic", "--extendedShapes", "", wav_file_path]

@@ -31,11 +31,11 @@ func _toggle_record():
 		recording.save_to_wav(recording_path)
 		_thread.start(_speech_to_text)
 	else:
+		print("recording")
 		effect.set_recording_active(true)
 
 func _speech_to_text():
-	print("recording")
-	var arguments = ["run", "stt.py", ProjectSettings.globalize_path(recording_path)]
+	var arguments = ["run", "stt_google.py", ProjectSettings.globalize_path(recording_path)]
 	var output = []
 	OS.execute("uv", arguments, output)
 	var result = output[0].rstrip("\r\n").lstrip(" ")
@@ -64,10 +64,10 @@ func _llm_to_voice(text):
 	match OS.get_name():
 		"Windows":
 			var command = 'echo "' + text + '"' + \
-			" | piper --model voices/es_MX-claude-high.onnx --output_file " \
+			" | uv run ./tts_google.py " \
 			+ ProjectSettings.globalize_path(wav_response_path)
-			OS.execute("cmd.exe", ["/C", command], output, true)
 			print(command)
+			OS.execute("cmd.exe", ["/C", command], output, true)
 		"Linux":
 			var command = "echo '" + text + "'" + \
 			" | .venv/bin/piper --model voices/es_MX-claude-high.onnx --output_file " \

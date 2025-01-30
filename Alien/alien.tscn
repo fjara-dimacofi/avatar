@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Alien/alien.gd" id="1_kfxsx"]
 [ext_resource type="PackedScene" uid="uid://bynm2qv8pem01" path="res://Alien/mouth rig.blend" id="1_xohnc"]
-[ext_resource type="PackedScene" uid="uid://21w4odmbdi51" path="res://voice_recorder.tscn" id="4_8xppn"]
+[ext_resource type="PackedScene" uid="uid://cmt1mnd3jupn7" path="res://components/voice_google_api/voice_google_api.tscn" id="3_xdrst"]
 
 [node name="Alien" type="Node3D"]
 script = ExtResource("1_kfxsx")
@@ -24,6 +24,6 @@ transform = Transform3D(0.999475, 0, 0.0323876, 0, 1, 0, -0.0323876, 0, 0.999475
 [node name="AudioStreamVoice" type="AudioStreamPlayer" parent="."]
 volume_db = 10.0
 
-[node name="VoiceRecorder" parent="." instance=ExtResource("4_8xppn")]
+[node name="VoiceGoogleApi" parent="." instance=ExtResource("3_xdrst")]
 
 [editable path="mouth rig"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmt1mnd3jupn7"]
+
+[ext_resource type="Script" path="res://components/voice_google_api/voice_google_api.gd" id="1_5aj87"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_eifch"]
+
+[node name="VoiceGoogleApi" type="Node"]
+script = ExtResource("1_5aj87")
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_eifch")
+autoplay = true
+bus = &"Record"

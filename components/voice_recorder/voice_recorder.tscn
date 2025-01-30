@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://21w4odmbdi51"]
 
-[ext_resource type="Script" path="res://voice_recorder.gd" id="1_yiy6c"]
+[ext_resource type="Script" path="res://components/voice_recorder/voice_recorder.gd" id="1_yiy6c"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_mcfuc"]
 
