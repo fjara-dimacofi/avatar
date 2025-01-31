@@ -6,13 +6,19 @@ Note: ssml must be well-formed according to:
 """
 from google.cloud import texttospeech
 import sys
+import io
+
+# sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8")
+# sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 # Instantiates a client
 client = texttospeech.TextToSpeechClient()
 
 # Set the text input to be synthesized
-text = input()
-output_path = sys.argv[1]
+with open(sys.argv[1], "r", encoding='utf-8') as f:
+    text = f.read()
+# print(text)
+output_path = sys.argv[2]
 synthesis_input = texttospeech.SynthesisInput(text=text)
 
 # Build the voice request, select the language code ("en-US") and the ssml

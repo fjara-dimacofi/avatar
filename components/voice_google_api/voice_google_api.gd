@@ -53,7 +53,7 @@ func _text_to_llm(text):
 			OS.execute("sh", ["-c", command], output)
 			print(command)
 			print(output)
-	var result = output[0].rstrip("\r\n").replace("'", "")
+	var result = output[0].rstrip("\r\n").replace("'", "").replace('"', "")
 	context += "<User>" + text + "</User>" + "<LLMResponse>" + result + "</LLMResponse>"
 	print(result)
 	_llm_to_voice(result)
@@ -63,11 +63,13 @@ func _llm_to_voice(text):
 
 	match OS.get_name():
 		"Windows":
-			var command = 'echo "' + text + '"' + \
-			" | uv run ./tts_google.py " \
-			+ ProjectSettings.globalize_path(wav_response_path)
+			var command = "'" + text + "' | Out-File -FilePath tmp -NoNewline -Encoding UTF8" \
+			+ "; uv run ./tts_google.py tmp " \
+			+ ProjectSettings.globalize_path(wav_response_path) \
+			+ '; Remove-Item -Path tmp -Force'
 			print(command)
-			OS.execute("cmd.exe", ["/C", command], output, true)
+			OS.execute("powershell.exe", ["-Command", '"' + command + '"'], output, true)
+			print(output)
 		"Linux":
 			var command = "echo '" + text + "'" + \
 			" | .venv/bin/piper --model voices/es_MX-claude-high.onnx --output_file " \
