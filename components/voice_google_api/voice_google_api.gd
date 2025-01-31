@@ -44,10 +44,11 @@ func _speech_to_text():
 
 func _text_to_llm(text):
 	var output = []
-	var command = 'echo "<Context>'  + context + '</Context>' + text + '" | uv run llm.py'
+	var command = 'echo "<Context>'  + context + '</Context>' + text + '" | uv run llm_google.py'
 	match OS.get_name():
 		"Windows":
 			OS.execute("cmd.exe", ["/C", command], output)
+			print(output)
 		"Linux":
 			command = "echo '<Context>" + context + "</Context>"+ text + "'" + " | uv run llm.py" 
 			OS.execute("sh", ["-c", command], output)
