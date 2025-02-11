@@ -29,11 +29,59 @@ func _toggle_record():
 		recording = effect.get_recording()
 		effect.set_recording_active(false)
 		recording.save_to_wav(recording_path)
-		_thread.start(_speech_to_text)
+		_thread.start(_speech_to_llm)
 	else:
 		print("recording")
 		effect.set_recording_active(true)
 
+func _speech_to_llm():
+	const instance_name = "instance-20250205-202855"
+	const target_path = "/home/fjara/"
+	const zone = "southamerica-east1-c"
+	var scp_command = \
+		'"C:/Users/fjara/AppData/Local/Google/Cloud SDK/google-cloud-sdk/bin/gcloud"' + \
+		" compute " + \
+		"scp " + \
+		ProjectSettings.globalize_path(recording_path) + " " +\
+		instance_name + ":" + target_path + " " +  \
+		"--zone=" + zone
+	OS.execute(
+		"cmd.exe",
+	 	["/C", scp_command]
+	)
+	print("Voice recording sent.")
+	# Get IP
+	var ip_command = \
+		"gcloud compute instances describe " + \
+	 	instance_name + \
+		" --zone="+zone + \
+		' --format="get(networkInterfaces[0].accessConfigs[0].natIP)"'
+	var ip_output = []
+	OS.execute(
+		"cmd.exe",
+		["/C", ip_command],
+		ip_output,
+		true
+	)
+	var instance_ip = ip_output[0].rstrip("\r\n")
+	
+	var script_command = \
+		"ssh " + \
+		"-i C:/Users/fjara/.ssh/google_compute_engine " + \
+		"fjara@" + instance_ip + \
+		' "/home/fjara/whisper/.venv/bin/python ' + \
+		'/home/fjara/whisper/main.py ' + \
+		'/home/fjara/' + recording_name + '"'
+	var script_output = []
+	OS.execute(
+		"powershell.exe",
+		["-Command", script_command],
+		script_output,
+		true
+	)
+	var result = script_output[0]
+	print(result)
+	_llm_to_voice(result)
 func _speech_to_text():
 	var arguments = ["run", "stt_google.py", ProjectSettings.globalize_path(recording_path)]
 	var output = []
@@ -68,9 +116,8 @@ func _llm_to_voice(text):
 			+ "; uv run ./tts_google.py tmp " \
 			+ ProjectSettings.globalize_path(wav_response_path) \
 			+ '; Remove-Item -Path tmp -Force'
-			print(command)
 			OS.execute("powershell.exe", ["-Command", '"' + command + '"'], output, true)
-			print(output)
+			print(output[0])
 		"Linux":
 			var command = "echo '" + text + "'" + \
 			" | .venv/bin/piper --model voices/es_MX-claude-high.onnx --output_file " \
