@@ -4,7 +4,6 @@ extends Node3D
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamVoice
 @onready var voice_recorder: Node = $VoiceGoogleApi
 const RhubarbParser = preload("res://rhubarb_parser.gd")
-const GdScriptAudioImport = preload("res://GDScriptAudioImport.gd")
 
 var wait_timer: float = -1
 var curr_animation: String = "B"
@@ -58,6 +57,6 @@ func _generate_rhubarb_lipsync():
 		"Linux":
 			var arguments = ["-r", "phonetic", "--extendedShapes", "", wav_file_path]
 			var output = []
-			var exit_code = OS.execute("rhubarb", arguments, output)
+			OS.execute("rhubarb", arguments, output)
 			mouth_positions = rhubarb_parser.parse(output[0])
 	pending_dialog = true

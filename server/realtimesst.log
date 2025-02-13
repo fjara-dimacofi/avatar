@@ -1,0 +1,832 @@
+2025-02-13 15:50:44.572 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 15:50:44.573 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 15:50:44.573 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 15:50:44.573 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 15:50:44.669 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 15:50:45.037 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 15:50:45.038 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 15:50:45.038 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 15:50:45.038 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 15:50:45.038 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 15:50:45.064 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 15:50:45.105 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 15:50:45.106 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 15:50:45.106 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 15:50:45.187 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 15:50:45.316 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 15:50:45.321 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 15:50:45.322 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 15:50:45.322 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 15:50:45.322 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 15:58:28.892 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 15:58:28.893 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 15:58:28.893 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 15:58:28.894 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 15:58:29.110 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 15:58:29.467 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 15:58:29.467 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 15:58:29.468 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 15:58:29.468 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 15:58:29.468 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 15:58:29.521 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 15:58:29.577 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 15:58:29.577 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 15:58:29.577 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 15:58:29.930 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 15:58:30.164 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 15:58:30.171 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 15:58:30.172 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 15:58:30.172 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 15:58:30.173 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 15:59:41.977 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 15:59:41.978 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 15:59:41.978 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 15:59:41.978 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 15:59:42.200 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 15:59:42.538 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 15:59:42.539 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 15:59:42.540 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 15:59:42.540 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 15:59:42.540 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 15:59:42.592 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 15:59:42.643 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 15:59:42.644 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 15:59:42.644 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 15:59:42.730 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 15:59:42.976 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 15:59:42.984 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 15:59:42.985 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 15:59:42.985 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 15:59:42.985 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:12:07.077 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:12:07.078 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:12:07.078 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:12:07.078 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:12:07.170 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:12:07.451 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:12:07.527 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:12:07.527 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:12:07.527 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:12:07.528 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:12:07.528 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:12:07.598 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:12:07.598 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:12:07.605 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:12:07.606 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:12:07.644 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:12:07.645 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:12:07.645 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:12:07.645 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:12:07.645 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:13:34.281 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:13:34.282 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:13:34.282 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:13:34.282 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:13:34.381 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:13:34.714 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:13:34.740 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:13:34.740 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:13:34.740 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:13:34.741 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:13:34.741 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:13:34.771 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:13:34.814 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:13:34.858 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:13:34.858 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:13:34.858 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:13:34.863 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:13:34.863 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:13:34.864 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:13:34.864 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:15:17.107 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:15:17.108 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:15:17.108 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:15:17.108 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:15:17.302 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:15:17.537 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:15:17.694 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:15:17.694 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:15:17.695 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:15:17.695 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:15:17.695 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:15:17.803 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:15:17.804 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:15:17.814 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:15:17.815 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:15:17.861 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:15:17.862 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:15:17.862 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:15:17.862 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:15:17.862 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:17:22.287 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:17:22.289 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:17:22.289 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:17:22.289 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:17:22.475 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:17:22.829 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:17:22.829 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:17:22.830 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:17:22.830 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:17:22.830 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:17:22.875 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:17:22.926 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:17:22.927 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:17:22.927 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:17:23.004 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:17:23.229 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:17:23.236 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:17:23.237 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:17:23.237 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:17:23.238 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:23:08.979 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:23:08.980 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:23:08.980 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:23:08.980 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:23:09.077 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:23:09.454 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:23:09.454 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:23:09.455 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:23:09.455 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:23:09.455 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:23:09.481 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:23:09.523 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:23:09.523 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:23:09.523 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:23:09.642 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:23:09.775 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:23:09.780 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:23:09.781 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:23:09.781 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:23:09.781 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:23:19.003 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-13 16:23:19.003 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-13 16:23:19.003 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-13 16:23:50.673 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-02-13 16:23:50.673 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-02-13 16:23:50.675 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-02-13 16:23:50.675 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-02-13 16:23:50.709 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-02-13 16:23:50.725 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-02-13 16:23:50.779 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-02-13 16:24:43.386 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:24:43.386 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:24:43.387 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:24:43.387 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:24:43.509 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:24:43.902 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:24:43.903 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:24:43.903 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:24:43.903 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:24:43.903 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:24:43.940 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:24:43.989 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:24:43.989 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:24:43.989 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:24:44.075 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:24:44.249 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:24:44.255 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:24:44.256 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:24:44.256 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:24:44.256 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:27:31.790 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:27:31.790 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:27:31.790 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:27:31.791 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:27:31.889 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:27:32.220 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:27:32.243 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:27:32.243 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:27:32.243 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:27:32.244 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:27:32.244 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:27:32.275 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:27:32.320 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:27:32.363 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:27:32.363 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:27:32.363 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:27:32.368 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:27:32.369 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:27:32.369 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:27:32.369 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:28:40.418 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:28:40.419 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:28:40.419 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:28:40.419 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:28:40.518 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:28:40.799 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:28:40.874 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:28:40.874 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:28:40.875 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:28:40.875 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:28:40.875 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:28:40.946 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:28:40.947 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:28:40.954 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:28:40.955 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:28:40.994 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:28:40.995 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:28:40.995 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:28:40.995 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:28:40.995 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:29:51.258 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:29:51.258 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:29:51.258 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:29:51.259 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:29:51.351 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:29:51.627 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:29:51.686 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:29:51.686 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:29:51.687 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:29:51.687 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:29:51.687 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:29:51.718 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:29:51.767 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:29:51.775 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:29:51.776 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:29:51.811 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:29:51.811 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:29:51.811 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:29:51.811 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:29:51.811 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 16:52:42.150 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 16:52:42.151 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 16:52:42.151 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 16:52:42.151 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 16:52:42.259 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 16:52:42.613 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 16:52:42.613 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 16:52:42.613 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 16:52:42.614 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 16:52:42.614 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 16:52:42.647 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 16:52:42.692 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 16:52:42.693 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 16:52:42.693 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 16:52:42.928 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 16:52:43.103 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 16:52:43.109 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 16:52:43.110 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 16:52:43.110 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 16:52:43.110 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 17:16:35.530 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 17:16:35.531 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 17:16:35.532 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 17:16:35.532 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 17:16:35.645 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 17:16:35.989 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 17:16:35.990 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 17:16:35.990 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 17:16:35.991 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 17:16:35.991 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 17:16:36.026 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 17:16:36.070 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 17:16:36.070 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 17:16:36.070 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 17:16:36.194 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 17:16:36.364 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 17:16:36.369 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 17:16:36.370 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 17:16:36.370 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 17:16:36.371 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 17:16:47.483 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-13 17:16:47.484 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-13 17:16:47.484 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-13 17:17:20.486 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-02-13 17:17:20.487 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-02-13 17:17:20.496 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-02-13 17:17:20.496 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-02-13 17:17:20.501 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-02-13 17:17:20.535 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-02-13 17:17:20.599 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-02-13 17:17:23.311 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 17:17:23.312 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 17:17:23.312 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 17:17:23.313 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 17:17:23.428 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 17:17:23.802 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 17:17:23.802 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 17:17:23.803 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 17:17:23.803 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 17:17:23.803 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 17:17:23.837 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 17:17:23.881 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 17:17:23.882 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 17:17:23.882 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 17:17:23.952 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 17:17:24.121 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 17:17:24.127 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 17:17:24.128 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 17:17:24.128 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 17:17:24.128 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 17:17:29.658 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-13 17:17:29.658 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-13 17:17:29.658 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-13 17:17:55.280 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-02-13 17:17:55.280 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-02-13 17:17:55.284 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-02-13 17:17:55.284 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-02-13 17:17:55.371 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-02-13 17:17:55.439 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-02-13 17:18:02.342 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 17:18:02.343 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 17:18:02.343 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 17:18:02.343 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 17:18:02.462 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 17:18:02.813 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 17:18:02.813 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 17:18:02.814 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 17:18:02.814 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 17:18:02.814 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 17:18:02.850 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 17:18:02.895 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 17:18:02.895 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 17:18:02.895 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 17:18:03.197 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 17:18:03.374 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 17:18:03.380 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 17:18:03.381 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 17:18:03.381 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 17:18:03.382 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 17:21:28.109 - RealTimeSTT: root - DEBUG - Debug: Caught exception in main try block
+2025-02-13 17:21:30.566 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 17:21:30.567 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 17:21:30.567 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 17:21:30.567 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 17:21:30.675 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 17:21:31.095 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 17:21:31.095 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 17:21:31.096 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 17:21:31.096 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 17:21:31.096 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 17:21:31.129 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 17:21:31.172 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 17:21:31.173 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 17:21:31.173 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 17:21:31.214 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 17:21:31.380 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 17:21:31.385 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 17:21:31.386 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 17:21:31.386 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 17:21:31.387 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 17:23:22.893 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-02-13 17:23:22.894 - RealTimeSTT: root - INFO - Initializing faster_whisper main transcription model tiny
+2025-02-13 17:23:22.894 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-02-13 17:23:22.894 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-02-13 17:23:23.005 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-02-13 17:23:23.283 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/Systran/faster-whisper-tiny/revision/main HTTP/1.1" 200 1871
+2025-02-13 17:23:23.344 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-02-13 17:23:23.345 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+2025-02-13 17:23:23.345 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-02-13 17:23:23.346 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ciruela/Repositories/avatar/.venv/lib/python3.10/site-packages/torch/_ops.py", line 1357, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+2025-02-13 17:23:23.346 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-02-13 17:23:23.386 - RealTimeSTT: torio._extension.utils - DEBUG - Successfully loaded FFmpeg4
+2025-02-13 17:23:23.449 - RealTimeSTT: faster_whisper - INFO - Processing audio with duration 00:01.000
+2025-02-13 17:23:23.459 - RealTimeSTT: faster_whisper - INFO - VAD filter removed 00:01.000 of audio
+2025-02-13 17:23:23.460 - RealTimeSTT: root - DEBUG - Faster_whisper main speech to text transcription model initialized successfully
+2025-02-13 17:23:23.490 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-02-13 17:23:23.491 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-02-13 17:23:23.491 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-02-13 17:23:23.491 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-02-13 17:23:23.491 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-02-13 17:23:36.603 - RealTimeSTT: root - INFO - Setting listen time
+2025-02-13 17:23:36.603 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-02-13 17:23:36.603 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-02-13 17:23:41.739 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-02-13 17:23:41.739 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-02-13 17:23:41.748 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-02-13 17:23:41.748 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-02-13 17:23:41.772 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-02-13 17:23:41.787 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-02-13 17:23:41.835 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method

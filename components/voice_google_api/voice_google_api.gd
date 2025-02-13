@@ -2,6 +2,13 @@ extends Node
 
 var effect
 var recording
+var is_recording: bool = false
+var pipe := StreamPeerTCP.new()
+var server_address := "127.0.0.1"
+var server_port := 5000
+var buffer: PackedByteArray
+var last_pos: int = 0
+
 var recording_name: String = "user_voice.wav"
 var recording_path = "user://" + recording_name
 var mp3_response_path = "user://llm_voice.mp3"
@@ -14,25 +21,54 @@ signal voice_response_ready
 func _ready() -> void:
 	var idx = AudioServer.get_bus_index("Record")
 	effect = AudioServer.get_bus_effect(idx, 0)
-	voice_response_ready.connect(_thread.wait_to_finish)
+	_connect_to_server()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+func _process(_delta: float) -> void:
+	if is_recording and effect.is_recording_active():
+		pipe.poll()
+		var recorded_audio = effect.get_recording()
+		if recorded_audio:
+			var full_buffer = recorded_audio.get_data()
+			var current_pos = full_buffer.size()
+			
+			# Only get the new data since last read
+			if current_pos > last_pos:
+				var new_data = full_buffer.slice(last_pos, current_pos)
+				_send_audio_chunk(new_data)
+				last_pos = current_pos
 func _input(event):
 	if event.is_action_pressed("toggle_record") or event.is_action_released("toggle_record"):
 		_toggle_record()
 
 func _toggle_record():
-	if effect.is_recording_active():
-		recording = effect.get_recording()
+	if is_recording:
+		is_recording = false
 		effect.set_recording_active(false)
-		recording.save_to_wav(recording_path)
-		_thread.start(_speech_to_text)
+		if pipe.get_status() == StreamPeerTCP.STATUS_CONNECTED:
+			var size = 0
+			var size_bytes = PackedByteArray()
+			size_bytes.resize(4)
+			size_bytes.encode_u32(0, size)
+			pipe.put_data(size_bytes)
 	else:
 		print("recording")
 		effect.set_recording_active(true)
+		is_recording = true
+		
+func _send_audio_chunk(audio_data: PackedByteArray):
+	if pipe.get_status() == StreamPeerTCP.STATUS_CONNECTED:
+		var size = audio_data.size()
+		var size_bytes = PackedByteArray()
+		size_bytes.resize(4)
+		size_bytes.encode_u32(0, size)
+		pipe.put_data(size_bytes + audio_data)
+
+func _connect_to_server():
+	var err = pipe.connect_to_host(server_address, server_port)
+	if err != OK:
+		print("Connection failed")
+	else:
+		print("Connected to Python")
 
 func _speech_to_text():
 	var arguments = ["run", "stt_google.py", ProjectSettings.globalize_path(recording_path)]
