@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmt1mnd3jupn7"]
+[gd_scene load_steps=4 format=3 uid="uid://cmt1mnd3jupn7"]
 
 [ext_resource type="Script" path="res://components/voice_google_api/voice_google_api.gd" id="1_5aj87"]
+[ext_resource type="PackedScene" uid="uid://co0eq6qytysef" path="res://UI/quick_actions.tscn" id="2_jwh0n"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_eifch"]
 
@@ -11,3 +12,9 @@ script = ExtResource("1_5aj87")
 stream = SubResource("AudioStreamMicrophone_eifch")
 autoplay = true
 bus = &"Record"
+
+[node name="QuickActions" parent="." instance=ExtResource("2_jwh0n")]
+
+[connection signal="pressed" from="QuickActions/MarginContainer/VBoxContainer/Bathroom" to="." method="_on_bathroom_pressed"]
+
+[editable path="QuickActions"]

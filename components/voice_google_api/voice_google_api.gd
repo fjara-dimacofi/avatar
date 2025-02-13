@@ -89,3 +89,8 @@ func _llm_to_voice(text):
 
 func _exit_tree() -> void:
 	_thread.wait_to_finish()
+
+func _on_bathroom_pressed() -> void:
+	print("pressed")
+	var text = "El baño está en el pasillo de al fondo a la derecha"
+	_thread.start(_llm_to_voice.bind(text))
