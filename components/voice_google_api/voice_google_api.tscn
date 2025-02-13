@@ -16,5 +16,7 @@ bus = &"Record"
 [node name="QuickActions" parent="." instance=ExtResource("2_jwh0n")]
 
 [connection signal="pressed" from="QuickActions/MarginContainer/VBoxContainer/Bathroom" to="." method="_on_bathroom_pressed"]
+[connection signal="pressed" from="QuickActions/MarginContainer/VBoxContainer/Gate" to="." method="_on_gate_pressed"]
+[connection signal="pressed" from="QuickActions/MarginContainer/VBoxContainer/Hello" to="." method="_on_hello_pressed"]
 
 [editable path="QuickActions"]

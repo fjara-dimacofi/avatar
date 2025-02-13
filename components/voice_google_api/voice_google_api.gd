@@ -64,7 +64,7 @@ func _speech_to_llm():
 		true
 	)
 	var instance_ip = ip_output[0].rstrip("\r\n")
-	
+	print(instance_ip)
 	var script_command = \
 		"ssh " + \
 		"-i C:/Users/fjara/.ssh/google_compute_engine " + \
@@ -138,6 +138,14 @@ func _exit_tree() -> void:
 	_thread.wait_to_finish()
 
 func _on_bathroom_pressed() -> void:
-	print("pressed")
 	var text = "El baño está en el pasillo de al fondo a la derecha"
+	_thread.start(_llm_to_voice.bind(text))
+
+func _on_gate_pressed() -> void:
+	var text = "Sigue caminando por este pasillo hasta la señalética, luego\
+	 dobla a la derecha y te encontrarás con las puertas de embarque"
+	_thread.start(_llm_to_voice.bind(text))
+
+func _on_hello_pressed() -> void:
+	var text = "Hola! En que puedo ayudarte?"
 	_thread.start(_llm_to_voice.bind(text))
